@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Battle : MonoBehaviour
 {
     private AttackPriority attackPriority;
@@ -17,8 +18,10 @@ public class Battle : MonoBehaviour
         //Начало атаки
         if (Input.GetKeyDown(KeyCode.F))
         {
+            
             attackingHero = attackPriority.attackPriorityList.Peek();
             attackingHero.GetComponent<Attack>().AttackStart();
+            
         }
 
         //Конец атаки
